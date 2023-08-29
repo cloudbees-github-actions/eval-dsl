@@ -1,0 +1,31 @@
+name: 'Execute CD/RO DSL'
+description: Execute DSL on a remote CloudBees CD/RO instance
+branding:
+  icon: 'command'
+  color: 'blue'
+  
+inputs:
+  dsl:
+    description: DSL to execute
+    required: false
+  dsl-file:
+    description: Path to the DSL file to executing
+    required: false
+  dsl-args:
+    description: DSL arguments
+    required: false
+  dsl-actual-parameter:
+    description: DSL actual parameters
+    required: false
+  ignore-unverified-cert:
+    description: Ignore unverified SSL certificate errors when connecting to CloudBees CD/RO instance
+    default: 'false'
+    required: false
+
+outputs:
+  response:
+    description: Response of the DSL execution
+
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

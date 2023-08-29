@@ -1,0 +1,32 @@
+{
+  "name": "poc-github-action-evaldsl",
+  "version": "0.0.1",
+  "description": "Proof of concept GitHub Action for evaluating DSL on a remote CloudBees CD/RO instance",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node src/index.js",
+    "build": "ncc build src/index.js -o dist --license licenses.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electric-cloud-community/poc-github-action-evaldsl.git"
+  },
+  "keywords": [],
+  "author": "CloudBees CD/RO UI engineers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/electric-cloud-community/poc-github-action-evaldsl/issues"
+  },
+  "homepage": "https://github.com/electric-cloud-community/poc-github-action-evaldsl#readme",
+  "type": "module",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/http-client": "^2.1.0",
+    "yaml": "^2.3.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1",
+    "dotenv": "^16.1.3"
+  }
+}
