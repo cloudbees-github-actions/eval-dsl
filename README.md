@@ -94,7 +94,7 @@ jobs:
 ```
 4. Go to the GitHub `Actions` tab and run the workflow `Create Simple Project`
 ## How to create additional CloudBees CD/RO actions
-The `eval-dsl` action is the basis of the other CloudBees-provided Actions such as `run-procedure` and `start-release`. It is implemented as a [JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) GitHub Action. The others are implemented as [Composite](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) type Actions. Using this Composite model, you can easily create your own CD/RO Actions. The [run-procedure action.yaml file](https://github.com/cloudbees-github-actions/blob/main/run-procedure/action.yaml) provides a useful template for doing this. Note that the `args` map is used to pass both DSL and Actual Parameters to the DSL. So, for example, the following workflow yaml,
+The `eval-dsl` action is the basis of the other CloudBees-provided Actions such as `run-procedure` and `start-release`. It is implemented as a [JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) GitHub Action. The others are implemented as [Composite](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) type Actions. Using this Composite model, you can easily create your own CD/RO Actions. The [run-procedure action.yaml file]([https://github.com/cloudbees-github-actions/blob/main/run-procedure/action.yaml](https://github.com/cloudbees-github-actions/run-procedure/blob/main/action.yaml)) provides a useful template for doing this. Note that the `args` map is used to pass both DSL and Actual Parameters to the DSL. So, for example, the following workflow yaml,
 ```yaml
 with:
   projectName: GHA Test
