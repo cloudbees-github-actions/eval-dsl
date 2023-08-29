@@ -93,6 +93,8 @@ jobs:
           }
 ```
 4. Go to the GitHub `Actions` tab and run the workflow `Create Simple Project`
+## Sample build and release repository
+The [CloudBees CD/RO GitHub Actions Demonstration Repository](https://github.com/cloudbees-demos/gh-actions-demo) illustrates how to implement a build and release workflow with the CloudBees CD/RO GitHub Actions.
 ## How to create additional CloudBees CD/RO actions
 The `eval-dsl` action is the basis of the other CloudBees-provided Actions such as `run-procedure` and `start-release`. It is implemented as a [JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action) GitHub Action. The others are implemented as [Composite](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) type Actions. Using this Composite model, you can easily create your own CD/RO Actions. The `action.yaml` file in [run-procedure](https://github.com/cloudbees-github-actions/run-procedure) provides a useful template for doing this. Note that the `args` map is used to pass both DSL and Actual Parameters to the DSL. So, for example, the following workflow yaml,
 ```yaml
