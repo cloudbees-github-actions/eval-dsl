@@ -8,9 +8,6 @@ import http from "@actions/http-client";
 import { cyan, yellow } from "./rainbow.js";
 
 
-const httpClient = new http.HttpClient("GitHub Action - CloudBees EvalDSL", [], {});
-
-
 // Environment variables definition
 //
 // For development mode create a .env file in the root of the project
@@ -79,6 +76,16 @@ const DSLBody = dsl || await fs.readFile(pathToDSLFile, "utf-8");
 
 core.info(cyan("DSL file is successfully read!\n"));
 //  End define DSL body
+
+
+
+
+// Set up HTTP client
+const httpClient = new http.HttpClient(
+  "GitHub Action - CloudBees EvalDSL",
+  [],
+  { ignoreSslError: ignoreUnverifiedCert }
+);
 
 
 

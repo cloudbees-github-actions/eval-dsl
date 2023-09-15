@@ -11420,9 +11420,6 @@ __nccwpck_require__.a(__webpack_module__, async (__webpack_handle_async_dependen
 
 
 
-const httpClient = new _actions_http_client__WEBPACK_IMPORTED_MODULE_4__.HttpClient("GitHub Action - CloudBees EvalDSL", [], {});
-
-
 // Environment variables definition
 //
 // For development mode create a .env file in the root of the project
@@ -11491,6 +11488,16 @@ const DSLBody = dsl || await fs__WEBPACK_IMPORTED_MODULE_0__.promises.readFile(p
 
 _actions_core__WEBPACK_IMPORTED_MODULE_3__.info((0,_rainbow_js__WEBPACK_IMPORTED_MODULE_5__/* .cyan */ .sl)("DSL file is successfully read!\n"));
 //  End define DSL body
+
+
+
+
+// Set up HTTP client
+const httpClient = new _actions_http_client__WEBPACK_IMPORTED_MODULE_4__.HttpClient(
+  "GitHub Action - CloudBees EvalDSL",
+  [],
+  { ignoreSslError: ignoreUnverifiedCert }
+);
 
 
 
